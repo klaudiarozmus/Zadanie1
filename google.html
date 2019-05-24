@@ -1,93 +1,69 @@
-<!DOCTYPE HTML>
-<style>
-.icons{
-  text-align: right;
-  font-family: 'Open Sans';
-  word-spacing: 10px;
-}
-.container{
-	display: grid;
-	margin: 150px 50px 50px 100px;
-}
-.form-search[type='text']{
-  border-radius: 15px; 
-  width:500px;
-  height: 40px;
-  padding-left: 40px;
-}
-.form-search[type='text']{
-  display:inline-block;
-}
-.form search{
-  position: absolute;
-  color: #99ccff;
-  padding: 12px;
-}
-.form micro{
-  position: absolute;
-  padding: 12px 520px;
-}
-.form key{
-  position: absolute;
-  padding: 12px 490px;
-}
-.mdc-fab--extended:hover {
-  font-weight: bold;
-    border: 1px solid #999;
-    color: black;
-}
-</style>  
+<!DOCTYPE html>
+
 
 <head>
     <title>Google Homepage</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  </head>
-       
-  <body>
-  <div class = "icons">
-  Gmail Grafika  
-  <first class="fa fa-th fa-lg"></i>
-  </div>
+	<link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   
-<div class = "flex-container">
-    
-	
-    <!-- GOOGLE IMG --> 
-	<center> 
-    <div class="google">
-      <a href="#" id="google_logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png" height="150" width="500"/>
-	      
-</a>
-</center>
+</head>
+  
+     
+<body>
+  <div class="icons">
+    <a href="https://gmail.com">Gmail</a>
+    <a href="https://www.google.pl/imghp?hl=pl&tab=wi&authuser=0">Grafika</a>
+  <first class="fa fa-th fa-lg">
+  </div>
 
+  <center> 
+  <div class = "container">
+    <!-- GOOGLE IMG --> 
+
+    <div class="google">
+      <a href="#" id="google_logo"><img src="./google_PNG19644.png" height="120" width="300"/></a>
     </div>
-    
     <!-- FORM SEARCH -->  
-    <div class="form"> 
-	<center> 
-      <form>
+    <div class="form">
+        <div class="main">
+        <div id="input_container">
         <search class="fa fa-search fa-lg"></search>
         <micro class="fa fa-microphone fa-lg"></micro>
-        <key class="fa fa-laptop fa-lg"></key>
+        <key class="fa fa-keyboard-o fa-lg"></key>
         <label for="form-search"></label>
-        <input type="text" class="form-search" placeholder="Szukaj w Google">  
-	</center>
-      </form>
-
-    </div>      
-    <!-- BUTTONS -->
-    <div class= "buttons"> 
-	<center> 
-      <button class="mdc-fab mdc-fab--extended">
-      <span class="mdc-fab__label">Szukaj w Google</span>
-      </button>
-      
-      <button class="mdc-fab mdc-fab--extended">
-      <span class="mdc-fab__label">Szczęśliwy traf</span>
-      </button>
-	</center>
+        <input id="myInput" type="text" class="form-search" placeholder="Search Google"  v-model="inputContent" >
+        <v-autocompleter v-bind:input="inputContent" v-if="inputContent"></v-autocompleter>
+        </div>
+        </div>
     </div>
-</div>   
+ 
+    <!-- BUTTONS -->
+  <div class= "buttons"> 
+      <button class="button" style="color: black"  v-if="!inputContent">Szukaj w Google</button>
+      <button class="button" style="color: black"  v-if="!inputContent">Szczęśliwy traf</button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+      <div class="info">
+          <p class="polska">Polska</p>
+      </div>
+      <div class="info">
+          <a class="footer-link-left" href="https://ads.google.com">Reklamuj się</a>
+          <a class="footer-link-left" href="https://www.google.com/services">Dla firm</a>
+          <a class="footer-link-left" href="https://about.google/intl">O nas</a>
+          <a class="footer-link-right" href="https://www.google.com/preferences">Ustawienia</a>
+          <a class="footer-link-right" href="https://policies.google.com/terms">Warunki</a>
+          <a class="footer-link-right" href="https://policies.google.com/privacy">Prywatność</a>
+      </div>
+  </footer>
+  
+</center>
+</div> 
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="animals.js"></script>
+<script src="main.js"></script>
+
   </body>
 </html>
