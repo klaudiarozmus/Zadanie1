@@ -1,19 +1,38 @@
+html {
+  overflow-x: hidden;
+}
+
 .icons{
   text-align: right;
   font-family: 'Open Sans';
   word-spacing: 10px;
 }
 
+a {
+    color: grey;
+    text-decoration: none;
+    font-family: 'Open Sans';
+}
+
 .container{
 	display: grid;
-	margin: 150px 50px 50px 100px;
+  margin: 150px 0px 50px;
+}
+
+#google-logo{
+  height:50px;
+  width:120px;
+  float:left;
+  margin-right: 10px; 
 }
 
 .form-search[type='text']{
-  border-radius: 15px; 
-  width:500px;
+  border-radius: 30px; 
+  border: 1px rgb(223, 225, 229) solid;
+  width: 510px;
   height: 40px;
   padding-left: 40px;
+  box-shadow: rgba(32, 33, 36, 0.28) 0px 1px 6px 0px;
 }
 
 .form-search[type='text']{
@@ -36,8 +55,60 @@
   padding: 12px 490px;
 }
 
-.mdc-fab--extended:hover {
-  font-weight: bold;
-    border: 1px solid #999;
-    color: black;
+
+.buttons{
+  margin-top: 20px;
+}
+
+.button{
+  padding: 10px;
+  margin: 8px;
+  background-color: rgb(244, 244, 244);
+  color: rgb(108, 110, 110);
+  height: 36px;
+  border-radius: 5px;
+  border-style: none;
+  border: 1px white solid;
+}
+
+table {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+  width: 500px;
+  margin-top: 10px;
+  background: white;
+  position: relative;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.info {
+  height: 41px;
+  width: 100%;
+  color: rgb(108, 110, 110);
+  background-color: rgb(242, 242, 242);
+  text-decoration: none;
+  font-size: 13px;
+  border-top: 1px rgb(228, 228, 228) solid;
+  margin: 0;
+}
+
+.polska{
+  text-align: left;
+  margin-left: 15px;
+}
+
+.footer-link-left{
+  float: left;
+  padding: 15px;
+}
+
+.footer-link-right {
+  float: right;
+  padding: 15px;
 }
